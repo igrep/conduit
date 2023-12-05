@@ -50,7 +50,6 @@ Library
                      , attoparsec               >= 0.10
                      , directory
                      , filepath
-                     , network                  >= 2.3
                      , primitive                >= 0.5
                      , process
                      , resourcet                >= 1.1
