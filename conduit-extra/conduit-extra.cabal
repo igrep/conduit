@@ -26,15 +26,10 @@ Library
                        Data.Conduit.Filesystem
                        Data.Conduit.Foldl
                        Data.Conduit.Lazy
-                       Data.Conduit.Network
-                       Data.Conduit.Network.UDP
                        Data.Conduit.Process
                        Data.Conduit.Process.Typed
                        Data.Conduit.Text
                        Data.Conduit.Zlib
-  if !os(windows)
-      Exposed-modules: Data.Conduit.Network.Unix
-
   if arch(x86_64) || arch(i386)
       -- These architectures are able to perform unaligned memory accesses
       cpp-options: -DALLOW_UNALIGNED_ACCESS
@@ -96,7 +91,6 @@ test-suite test
                      Data.Conduit.ExtraSpec
                      Data.Conduit.FilesystemSpec
                      Data.Conduit.LazySpec
-                     Data.Conduit.NetworkSpec
                      Data.Conduit.ProcessSpec
                      Data.Conduit.Process.TypedSpec
                      Data.Conduit.TextSpec
